@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwjt28w5ajyqm"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_swg33"]
+[ext_resource type="Texture2D" uid="uid://dxlvf20j3sdna" path="res://artDump/playerToken.png" id="2_g7gge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r7002"]
+
+[node name="2D_Scene" type="Node2D"]
+
+[node name="Player" type="Area2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_swg33")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("2_g7gge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-8, 32)
+shape = SubResource("RectangleShape2D_r7002")
+
+[node name="RayCast2D" type="RayCast2D" parent="Player"]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]

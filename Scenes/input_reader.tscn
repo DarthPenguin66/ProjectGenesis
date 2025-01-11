@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b20b1jna5krbq"]
+
+[ext_resource type="Script" path="res://input_reader.gd" id="1_l8lm2"]
+
+[node name="InputReader" type="Node"]
+script = ExtResource("1_l8lm2")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+collision_mask = 2
+collide_with_areas = true

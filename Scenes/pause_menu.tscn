@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwpe6b8thrpq2"]
+
+[ext_resource type="Script" path="res://PauseGame.gd" id="1_m4mii"]
+[ext_resource type="Texture2D" uid="uid://b4xkf1ni7wuqf" path="res://artDump/BadTallRedRectTEMP.png" id="2_3lmf0"]
+
+[node name="PauseMenu" type="Node"]
+script = ExtResource("1_m4mii")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CanvasGroup" type="CanvasGroup" parent="CanvasLayer"]
+position = Vector2(832, 2)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CanvasGroup"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_3lmf0")
+metadata/_edit_use_anchors_ = true
+
+[node name="OptionsButton" type="Button" parent="CanvasLayer/CanvasGroup/TextureRect"]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 51.0
+offset_right = 172.0
+offset_bottom = 82.0
+text = "Options"
+metadata/_edit_use_anchors_ = true
+
+[node name="BagButton" type="Button" parent="CanvasLayer/CanvasGroup/TextureRect"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 90.0
+offset_right = 149.0
+offset_bottom = 121.0
+text = "Bag
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="FigmentsButton" type="Button" parent="CanvasLayer/CanvasGroup/TextureRect"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 129.0
+offset_right = 166.0
+offset_bottom = 160.0
+text = "Figments"
+metadata/_edit_use_anchors_ = true
+
+[node name="SelfButton" type="Button" parent="CanvasLayer/CanvasGroup/TextureRect"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 177.0
+offset_right = 147.0
+offset_bottom = 208.0
+text = "Self"
+metadata/_edit_use_anchors_ = true
