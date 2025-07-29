@@ -49,6 +49,8 @@ dialogue = "hello im mary"
 [node name="billy bob something" parent="." instance=ExtResource("6_hdih6")]
 position = Vector2(75, -139)
 dialogue = "Hey you talked to me!"
+transitionSceneAfterDialogue = true
+sceneToTransitionTo = "res://Scenes/battleSystem.tscn"
 
 [node name="Sprite2D" parent="billy bob something" index="0"]
 texture = ExtResource("7_x7mr0")

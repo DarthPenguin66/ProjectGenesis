@@ -11,6 +11,7 @@ func _ready():
 	
 	playerNode = get_node("/root/Main/playerTree/Player") #this is bad, we should find better way than hard coded paths
 	print(playerNode.name)
+	print("testtest")
 	tileSize = playerNode.tile_size
 	'''
 	var mainNode = get_parent()

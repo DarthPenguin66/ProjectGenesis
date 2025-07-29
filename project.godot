@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 InputReader="*res://Scenes/input_reader.tscn"
+PlayerData="*res://Scenes/player_data.tscn"
 
 [dotnet]
 
