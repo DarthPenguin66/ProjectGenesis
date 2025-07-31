@@ -10,7 +10,13 @@ extends Resource
 @export var resilience_percent: int = 0
 @export var speed_percent: int = 0
 
-func _init(figmentName:String, 
+@export var battleSprite: Texture2D
+@export var abilities:Array[FigmentAbility]
+@export var moveList:Array[figmentMoves]
+
+
+
+func _init(figmentName:String="", 
 	health_perc:int = 20,
 	power_perc:int = 20,
 	defense_perc:int = 20,

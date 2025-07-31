@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="FigmentData" load_steps=4 format=3 uid="uid://q7u7rnqgc8u8"]
+
+[ext_resource type="Script" path="res://figmentAbilities.gd" id="1_3mytc"]
+[ext_resource type="Script" path="res://figmentMoves.gd" id="2_e31jr"]
+[ext_resource type="Script" path="res://FigmentSpeciesData.gd" id="3_tm8ki"]
+
+[resource]
+script = ExtResource("3_tm8ki")
+species_name = ""
+health_percent = 0
+power_percent = 0
+defense_percent = 0
+resilience_percent = 0
+speed_percent = 0
+abilities = Array[ExtResource("1_3mytc")]([])
+moveList = Array[ExtResource("2_e31jr")]([])

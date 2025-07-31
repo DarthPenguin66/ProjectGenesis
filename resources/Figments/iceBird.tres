@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="FigmentData" load_steps=5 format=3 uid="uid://hgfodicjbu8"]
+
+[ext_resource type="Script" path="res://figmentMoves.gd" id="1_dtj8a"]
+[ext_resource type="Resource" uid="uid://cnpbq0kh7xwc6" path="res://resources/moves/guard.tres" id="2_f6sgg"]
+[ext_resource type="Resource" uid="uid://cuinl1wugbyhq" path="res://resources/moves/iceBlast.tres" id="3_2sieu"]
+[ext_resource type="Script" path="res://FigmentSpeciesData.gd" id="4_krajv"]
+
+[resource]
+script = ExtResource("4_krajv")
+species_name = ""
+health_percent = 0
+power_percent = 0
+defense_percent = 0
+resilience_percent = 0
+speed_percent = 0
+moveList = Array[ExtResource("1_dtj8a")]([ExtResource("2_f6sgg"), ExtResource("3_2sieu")])

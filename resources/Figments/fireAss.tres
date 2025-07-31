@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FigmentData" load_steps=6 format=3 uid="uid://b4v7g1qqtuhwe"]
+
+[ext_resource type="Script" path="res://figmentAbilities.gd" id="1_ttwqj"]
+[ext_resource type="Resource" uid="uid://cw4gecr1ijova" path="res://resources/moves/fireBlast.tres" id="1_vcckf"]
+[ext_resource type="Resource" uid="uid://cnpbq0kh7xwc6" path="res://resources/moves/guard.tres" id="2_lk156"]
+[ext_resource type="Script" path="res://figmentMoves.gd" id="2_yrfph"]
+[ext_resource type="Script" path="res://FigmentSpeciesData.gd" id="3_q5q5i"]
+
+[resource]
+script = ExtResource("3_q5q5i")
+species_name = ""
+health_percent = 0
+power_percent = 0
+defense_percent = 0
+resilience_percent = 0
+speed_percent = 0
+abilities = Array[ExtResource("1_ttwqj")]([])
+moveList = Array[ExtResource("2_yrfph")]([ExtResource("1_vcckf"), ExtResource("2_lk156")])

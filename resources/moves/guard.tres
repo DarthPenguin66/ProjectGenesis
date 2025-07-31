@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="figmentMoves" load_steps=2 format=3 uid="uid://cnpbq0kh7xwc6"]
+
+[ext_resource type="Script" path="res://figmentMoves.gd" id="1_3r5sa"]
+
+[resource]
+script = ExtResource("1_3r5sa")
+name = "Guard"
+description = ""
+power = 0
+hitPercentage = 100
+coolDownTurns = 3
+isUtility = true

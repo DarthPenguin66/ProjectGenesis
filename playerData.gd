@@ -6,10 +6,14 @@ func _ready():
 '''
 var test:FigmentData
 
-var figmentTeam = []
+var figmentTeam:Array[figment] = []
 
+var debugTeam:Array[String] = ["res://resources/Figments/iceBird.tres","res://resources/Figments/fireAss.tres"]
+var debugLevel:int = 10
+var loopIterator:int = 0
 func _ready():
-	figmentTeam.append(FigmentData.new("iceBird"))
-	figmentTeam.append(FigmentData.new("fireAss"))
-	for figment in figmentTeam:
-		print(figment.species_name)
+	for debugFigment in debugTeam:
+		print(debugFigment)
+		var figmentResource = load(debugFigment)
+		figmentTeam.append(figment.new(figmentResource, debugLevel))
+		print(figmentTeam[loopIterator].nickName)
