@@ -1,12 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnk5yamopsfq1"]
+[gd_scene load_steps=6 format=3 uid="uid://cnk5yamopsfq1"]
 
 [ext_resource type="Texture2D" uid="uid://bsmtnrk6ma3ah" path="res://artDump/battleBackgroundTEMP.png" id="1_1rlni"]
+[ext_resource type="Script" path="res://battleScene.gd" id="1_m2b4s"]
 [ext_resource type="Script" path="res://genericBattler.gd" id="1_muob6"]
 [ext_resource type="Texture2D" uid="uid://da2h2dhy2clcm" path="res://artDump/iceBird.png" id="2_c3qgy"]
 [ext_resource type="Texture2D" uid="uid://dyt2tlp3kk1jj" path="res://artDump/FireAss.png" id="3_5odg4"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_muob6")
+script = ExtResource("1_m2b4s")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -14,6 +15,7 @@ script = ExtResource("1_muob6")
 texture = ExtResource("1_1rlni")
 
 [node name="AlliedBattler_1" type="Node2D" parent="."]
+script = ExtResource("1_muob6")
 
 [node name="Sprite2D" type="Sprite2D" parent="AlliedBattler_1"]
 z_index = 1
@@ -21,6 +23,7 @@ position = Vector2(-371, -26)
 texture = ExtResource("2_c3qgy")
 
 [node name="AlliedBattler_2" type="Node2D" parent="."]
+script = ExtResource("1_muob6")
 
 [node name="Sprite2D" type="Sprite2D" parent="AlliedBattler_2"]
 z_index = 1
@@ -28,9 +31,11 @@ position = Vector2(854, 35)
 texture = ExtResource("3_5odg4")
 
 [node name="EnemyBattler_1" type="Node2D" parent="."]
+script = ExtResource("1_muob6")
 
 [node name="Sprite2D" type="Sprite2D" parent="EnemyBattler_1"]
 
 [node name="EnemyBattler_2" type="Node2D" parent="."]
+script = ExtResource("1_muob6")
 
 [node name="Sprite2D" type="Sprite2D" parent="EnemyBattler_2"]
