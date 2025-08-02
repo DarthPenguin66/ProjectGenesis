@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do3i2e47inye2"
-path="res://.godot/imported/FireAss.png-6b0aa4cf5d446bd3e1798efb25623124.ctex"
+uid="uid://bhffkjs2nxw7f"
+path="res://.godot/imported/FireAsOlds.png-357ec98cb9ae57722db29962e5659c5f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://artDump/FireAss.png"
-dest_files=["res://.godot/imported/FireAss.png-6b0aa4cf5d446bd3e1798efb25623124.ctex"]
+source_file="res://artDump/FireAsOlds.png"
+dest_files=["res://.godot/imported/FireAsOlds.png-357ec98cb9ae57722db29962e5659c5f.ctex"]
 
 [params]
 

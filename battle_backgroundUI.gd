@@ -17,7 +17,7 @@ func loadBattleUI():
 		add_child(sprite)
 		battlePositionNodes.append((sprite))	
 		
-		sprite.transform = parentBattleSystem.figmentPositions[loopIterator]
+		sprite.position = parentBattleSystem.figmentPositions[loopIterator]
 		sprite.texture = ImageTexture.create_from_image(positionSpriteImage)
 		sprite.z_index = 1
 		

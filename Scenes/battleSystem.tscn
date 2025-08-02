@@ -27,8 +27,10 @@ position = Vector2(140, -101)
 script = ExtResource("1_muob6")
 
 [node name="Sprite2D" type="Sprite2D" parent="EnemyBattler_1"]
+z_index = 1
 
 [node name="EnemyBattler_2" type="Node2D" parent="."]
 script = ExtResource("1_muob6")
 
 [node name="Sprite2D" type="Sprite2D" parent="EnemyBattler_2"]
+z_index = 1

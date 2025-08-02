@@ -1,16 +1,21 @@
-[gd_resource type="Resource" script_class="FigmentData" load_steps=5 format=3 uid="uid://hgfodicjbu8"]
+[gd_resource type="Resource" script_class="FigmentData" load_steps=8 format=3 uid="uid://hgfodicjbu8"]
 
 [ext_resource type="Script" path="res://figmentMoves.gd" id="1_dtj8a"]
+[ext_resource type="Script" path="res://figmentAbilities.gd" id="1_nn5bo"]
 [ext_resource type="Resource" uid="uid://cnpbq0kh7xwc6" path="res://resources/moves/guard.tres" id="2_f6sgg"]
+[ext_resource type="Resource" uid="uid://db0lmmv002yh8" path="res://resources/abilities/subZero.tres" id="2_yvila"]
 [ext_resource type="Resource" uid="uid://cuinl1wugbyhq" path="res://resources/moves/iceBlast.tres" id="3_2sieu"]
+[ext_resource type="Texture2D" uid="uid://bsefvvi6jc03x" path="res://artDump/IceBird.png" id="3_gds66"]
 [ext_resource type="Script" path="res://FigmentSpeciesData.gd" id="4_krajv"]
 
 [resource]
 script = ExtResource("4_krajv")
-species_name = ""
-health_percent = 0
-power_percent = 0
-defense_percent = 0
-resilience_percent = 0
-speed_percent = 0
+species_name = "Ice Bird"
+health_percent = 30
+power_percent = 30
+defense_percent = 15
+resilience_percent = 20
+speed_percent = 5
+battleSprite = ExtResource("3_gds66")
+abilities = Array[ExtResource("1_nn5bo")]([ExtResource("2_yvila")])
 moveList = Array[ExtResource("1_dtj8a")]([ExtResource("2_f6sgg"), ExtResource("3_2sieu")])

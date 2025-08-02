@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://da2h2dhy2clcm"
-path="res://.godot/imported/iceBird.png-055d0d8a2ddc60e2b0f05fb793929517.ctex"
+uid="uid://bsefvvi6jc03x"
+path="res://.godot/imported/IceBird.png-073ec3ad8568a91a85a5a9a925e1ebbf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://artDump/iceBird.png"
-dest_files=["res://.godot/imported/iceBird.png-055d0d8a2ddc60e2b0f05fb793929517.ctex"]
+source_file="res://artDump/IceBird.png"
+dest_files=["res://.godot/imported/IceBird.png-073ec3ad8568a91a85a5a9a925e1ebbf.ctex"]
 
 [params]
 

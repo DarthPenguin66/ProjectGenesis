@@ -33,3 +33,9 @@ func _init(species:FigmentData, level:int, figmentAbility:FigmentAbility = null,
 	currentSpeed = floor(figmentSpecies.speed_percent * 0.01 * (50 + 19 * currentLevel))
 
 	currentHealth = maxHealth
+	
+func printData():
+	print("figmentSpecies: " + figmentSpecies.species_name)
+	print("currentLevel: " + str(currentLevel))
+	print("currentHealth: " + str(currentHealth))
+	print("sprite or texture: " + str(figmentSpecies.battleSprite.get_height()))
