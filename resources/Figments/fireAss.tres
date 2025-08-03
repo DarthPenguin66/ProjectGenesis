@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="FigmentData" load_steps=8 format=3 uid="uid://b4v7g1qqtuhwe"]
 
-[ext_resource type="Script" path="res://figmentAbilities.gd" id="1_ttwqj"]
+[ext_resource type="Script" path="res://scripts/figmentDataScripts/figmentAbilities.gd" id="1_ttwqj"]
 [ext_resource type="Resource" uid="uid://cw4gecr1ijova" path="res://resources/moves/fireBlast.tres" id="1_vcckf"]
 [ext_resource type="Resource" uid="uid://cnpbq0kh7xwc6" path="res://resources/moves/guard.tres" id="2_lk156"]
-[ext_resource type="Script" path="res://figmentMoves.gd" id="2_yrfph"]
+[ext_resource type="Script" path="res://scripts/figmentDataScripts/figmentMoves.gd" id="2_yrfph"]
 [ext_resource type="Resource" uid="uid://db0lmmv002yh8" path="res://resources/abilities/subZero.tres" id="2_yt518"]
-[ext_resource type="Script" path="res://FigmentSpeciesData.gd" id="3_q5q5i"]
+[ext_resource type="Script" path="res://scripts/figmentDataScripts/FigmentSpeciesData.gd" id="3_q5q5i"]
 [ext_resource type="Texture2D" uid="uid://do3i2e47inye2" path="res://artDump/FireAss.png" id="3_qa7gc"]
 
 [resource]

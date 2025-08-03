@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnk5yamopsfq1"]
+
+[ext_resource type="Script" path="res://scripts/BattleScene/battleScene.gd" id="1_22qod"]
+[ext_resource type="PackedScene" uid="uid://duqaqx5c18ddh" path="res://Scenes/BattleScenes/UI/BattleScene_BackgroundUI.tscn" id="2_56x8s"]
+[ext_resource type="PackedScene" uid="uid://ds52wbfyhuwqe" path="res://Scenes/BattleScenes/UI/BattleSceneForegroundUI.tscn" id="3_mgii1"]
+[ext_resource type="Script" path="res://scripts/BattleScene/genericBattler.gd" id="4_4hpti"]
+
+[node name="Node2D" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_22qod")
+
+[node name="Battle_BackgroundUI" parent="." instance=ExtResource("2_56x8s")]
+
+[node name="battle_foregroundUI" parent="." instance=ExtResource("3_mgii1")]
+
+[node name="AlliedBattler_1" type="Node2D" parent="."]
+script = ExtResource("4_4hpti")
+
+[node name="Sprite2D" type="Sprite2D" parent="AlliedBattler_1"]
+z_index = 1
+position = Vector2(-371, -26)
+
+[node name="AlliedBattler_2" type="Node2D" parent="."]
+script = ExtResource("4_4hpti")
+
+[node name="Sprite2D" type="Sprite2D" parent="AlliedBattler_2"]
+z_index = 1
+position = Vector2(140, -101)
+
+[node name="EnemyBattler_1" type="Node2D" parent="."]
+script = ExtResource("4_4hpti")
+
+[node name="Sprite2D" type="Sprite2D" parent="EnemyBattler_1"]
+z_index = 1
+
+[node name="EnemyBattler_2" type="Node2D" parent="."]
+script = ExtResource("4_4hpti")
+
+[node name="Sprite2D" type="Sprite2D" parent="EnemyBattler_2"]
+z_index = 1

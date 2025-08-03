@@ -1,4 +1,4 @@
-class_name battle_bakcgroundUI
+class_name battle_backgroundUI
 extends Node
 
 var battlePositionNodes:Array[Sprite2D] = []

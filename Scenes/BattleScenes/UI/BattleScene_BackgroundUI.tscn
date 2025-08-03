@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://duqaqx5c18ddh"]
 
-[ext_resource type="Script" path="res://battle_backgroundUI.gd" id="1_7equm"]
+[ext_resource type="Script" path="res://scripts/BattleScene/UI/battle_backgroundUI.gd" id="1_7equm"]
 [ext_resource type="Texture2D" uid="uid://bsmtnrk6ma3ah" path="res://artDump/battleBackgroundTEMP.png" id="2_g0ct8"]
 
 [node name="Node2D" type="Node"]

@@ -50,7 +50,7 @@ dialogue = "hello im mary"
 position = Vector2(75, -139)
 dialogue = "Hey you talked to me!"
 transitionSceneAfterDialogue = true
-sceneToTransitionTo = "res://Scenes/battleSystem.tscn"
+sceneToTransitionTo = "res://Scenes/BattleScenes/battleSystem.tscn"
 
 [node name="Sprite2D" parent="billy bob something" index="0"]
 texture = ExtResource("7_x7mr0")

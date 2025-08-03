@@ -5,13 +5,17 @@ extends Node
 #@export var previousSceneInformation
 #TODO: need to figure out how to store data from previous scene and how to best transition back after a battle
 
+#other nodes
 var playerData:Node
+var childBackgroundUI:Node
+var childForegroundUI:Node
+
 
 var battle_input:battleInput=null
 var debugTeam:Array[String] = ["res://resources/Figments/iceBird.tres","res://resources/Figments/fireAss.tres"]
 var debugLevel:int = 5
 var enemyTeam:Array[figment]=[]
-enum battlePositions{innerLeft, outerLeft, innerRight, outerRight}
+enum battlePositions{innerLeft, outerLeft, innerRight, outerRight, NONE}
 var alliedBattlers:Array[genericBattler] = []
 var enemyBattlers:Array[genericBattler] = []
 
@@ -33,12 +37,15 @@ var figmentPositions:Array[Vector2] = [
 	figmentPosition_ally_inner_left,
 	figmentPosition_ally_outer_left,
 	figmentPosition_ally_inner_right,
-	figmentPosition_ally_outer_right]
-
+	figmentPosition_ally_outer_right] 
+	
 func _ready():
 
 	#get player data
 	playerData = get_node("/root/PlayerData")
+
+	#setup UI nodes
+	print("battleScene readied")
 
 	#if battleInput:
 	for fig in debugTeam:
@@ -46,9 +53,14 @@ func _ready():
 		enemyTeam.append(figment.new(figmentResource, debugLevel))
 			
 	for child in get_children():
-		#battle ui child
-		if child is battle_bakcgroundUI:
-			child.loadBattleUI()
+		#battle ui children
+		if child is battle_backgroundUI:
+			childBackgroundUI = child
+			childBackgroundUI.loadBattleUI()
+		elif child is battle_foregroundUI:
+			childForegroundUI = child
+			childForegroundUI.loadBattleUI()
+			
 		#battler child	
 		elif child is genericBattler:
 			if "Allied" in child.name:
@@ -79,4 +91,8 @@ func _ready():
 	var randomPosition = validPositions.pick_random()
 	enemyBattlers[0].moveBattler(position1)
 	enemyBattlers[1].moveBattler(position2)
+	
+	childForegroundUI.selectTile()
+	
+	
 	
