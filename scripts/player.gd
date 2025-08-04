@@ -5,16 +5,17 @@ var inputs = {"keyboard_right": Vector2.RIGHT,
 			"keyboard_up": Vector2.UP,
 			"keyboard_down": Vector2.DOWN,}
 
-@onready var ray = $RayCast2D
+@onready var TerrainRay = $terrainRayCast
+@onready var interactRay = $interactRayCast
 @onready var facingDirection = Vector2.ZERO
 var tile_size = 16
 var animation_speed = 5
 var moving = false
 
 func move(dir):
-	ray.target_position = dir * tile_size
-	ray.force_raycast_update()
-	if !ray.is_colliding():
+	TerrainRay.target_position = dir * tile_size
+	TerrainRay.force_raycast_update()
+	if !TerrainRay.is_colliding():
 		#position += inputs[dir] * tile_size
 		var tween = create_tween()
 		tween.tween_property(self, "position",
@@ -31,13 +32,27 @@ func _ready() -> void:
 	
 
 func interactPressed():
-	ray.target_position = facingDirection * tile_size
+	TerrainRay.target_position = facingDirection * tile_size
 
 @export var speed = 400 #speed in pixels per frame
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if moving:
 		return
+
+	# interaction Code
+	if Input.is_action_pressed("keyboard_interact"):
+		interactRay.target_position = facingDirection * tile_size
+		interactRay.force_raycast_update() #causes the raycast to update outside of a physics frame. Needed to get immediate feedback
+		var InteractObject = interactRay.get_collider()
+		if InteractObject:
+			var functions = InteractObject.get_method_list()
+			var properties = InteractObject.get_property_list()
+			print(InteractObject.name)
+			InteractObject.interactCall()
+			print("interacted with object")
+	
+	# velocity code
 
 	var velocity = Vector2.ZERO # The player's movement vector.
 	if Input.is_action_pressed("keyboard_right"):

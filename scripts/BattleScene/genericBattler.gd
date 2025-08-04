@@ -9,6 +9,7 @@ var ActiveBattleScene:battleScene
 var figmentInBattle:figment = null
 var battlePosition:battleScene.battlePositions = ActiveBattleScene.battlePositions.NONE
 var battleSprite:Sprite2D 
+var isPlaced:bool = false
 
 func readyBattler():
 	ActiveBattleScene = self.get_parent()

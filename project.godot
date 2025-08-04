@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-InputReader="*res://Scenes/globalScenes/input_reader.tscn"
 PlayerData="*res://Scenes/globalScenes/player_data.tscn"
+GlobalSceneTransitionTimer="*res://Scenes/globalScenes/globalSceneTransitionTimer.tscn"
 
 [dotnet]
 

@@ -95,4 +95,14 @@ func _ready():
 	childForegroundUI.selectTile()
 	
 	
-	
+func _placeAlliedFigments(selctedTile:battlePositions) -> void:
+	var iterator:int = -1 #used for tracking our looping (we increment at beginning of loop, hence -1)
+	for battler in alliedBattlers:
+		iterator+=1
+		if not battler.isPlaced:
+			battler.moveBattler(selctedTile)
+			battler.isPlaced = true
+			if iterator < alliedBattlers.size() - 1:
+				childForegroundUI.selectTile()
+				return
+			return

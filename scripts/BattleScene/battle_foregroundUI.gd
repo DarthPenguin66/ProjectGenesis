@@ -5,6 +5,7 @@ var tileSelector:AnimatedSprite2D
 var dialougeGui:CanvasGroup
 var dialogueLabel:Label
 var inputCooldownTimer:Timer
+var sceneTransitionTimer:Timer #TODO: make this a global timer that tracks transitions
 
 
 var selectorMovementlocked:bool = true
@@ -12,8 +13,12 @@ var select
 var selectorPosition:battleScene.battlePositions = 0 #starts innerLeft
 var parentBattleSystem
 
+signal tileSelected_placeFigment
+
+var globalSceneTransitionTimer:Node
+
 func _ready():
-	print("foreground readied")
+	globalSceneTransitionTimer = get_node("/root/GlobalSceneTransitionTimer")
 
 func loadBattleUI():
 	parentBattleSystem = get_parent()
@@ -28,7 +33,7 @@ func loadBattleUI():
 			inputCooldownTimer = child
 		
 	
-	tileSelector.position = parentBattleSystem.figmentPositions[selectorPosition]
+	tileSelector.position = parentBattleSystem.figmentPositions[4 + selectorPosition]
 			
 func selectTile(displayText:String = "Please Select Tile"):
 	dialogueLabel.text = displayText
@@ -40,12 +45,15 @@ func selectTile(displayText:String = "Please Select Tile"):
 		
 func _process(delta: float) -> void:
 	#print("is stopped: " + str(inputCooldownTimer.is_stopped()))
-	if selectorMovementlocked || (not inputCooldownTimer.is_stopped()):
+	if selectorMovementlocked || not inputCooldownTimer.is_stopped() :
 		return
-	#if Input.is_action_pressed("keyboard_interact"):
-	#	selectorMovementlocked = true
-	#	tileSelector.visible = false
-	#	dialogueLabel.visible = false
+	if Input.is_action_pressed("keyboard_interact") && globalSceneTransitionTimer.is_stopped():
+		inputCooldownTimer.start()
+		selectorMovementlocked = true
+		tileSelector.visible = false
+		dialogueLabel.visible = false
+		tileSelected_placeFigment.emit(selectorPosition + 4)
+		return
 	if Input.is_action_pressed("keyboard_up") || Input.is_action_pressed("keyboard_down"):
 		inputCooldownTimer.start()
 		selectorPosition = selectorPosition + selectorCalMovement(selectorPosition) # code that swaps the vertical position enum

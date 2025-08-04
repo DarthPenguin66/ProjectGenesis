@@ -38,3 +38,5 @@ script = ExtResource("4_4hpti")
 
 [node name="Sprite2D" type="Sprite2D" parent="EnemyBattler_2"]
 z_index = 1
+
+[connection signal="tileSelected_placeFigment" from="battle_foregroundUI" to="." method="_placeAlliedFigments"]

@@ -19,6 +19,10 @@ texture = ExtResource("2_g7gge")
 position = Vector2(-8, 32)
 shape = SubResource("RectangleShape2D_r7002")
 
-[node name="RayCast2D" type="RayCast2D" parent="Player"]
+[node name="terrainRayCast" type="RayCast2D" parent="Player"]
+
+[node name="interactRayCast" type="RayCast2D" parent="Player"]
+collision_mask = 2
+collide_with_areas = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]

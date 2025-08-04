@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cg3gsrwnleu05"]
+
+[node name="globalSceneTransitionTimer" type="Timer"]
+wait_time = 0.25
+one_shot = true
