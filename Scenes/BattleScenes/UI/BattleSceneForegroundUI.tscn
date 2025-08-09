@@ -30,8 +30,10 @@ frame_progress = 0.471086
 speed_scale = 0.25
 
 [node name="CanvasGroup" type="CanvasGroup" parent="."]
-visible = false
+top_level = true
 z_index = 5
+z_as_relative = false
+position = Vector2(300, 50)
 
 [node name="TextureRect" type="TextureRect" parent="CanvasGroup"]
 offset_left = -138.0

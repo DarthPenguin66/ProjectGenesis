@@ -15,7 +15,7 @@ var battle_input:battleInput=null
 var debugTeam:Array[String] = ["res://resources/Figments/iceBird.tres","res://resources/Figments/fireAss.tres"]
 var debugLevel:int = 5
 var enemyTeam:Array[figment]=[]
-enum battlePositions{innerLeft, outerLeft, innerRight, outerRight, NONE}
+enum battlePositions{innerLeft, outerLeft, innerRight, outerRight, NONE = -1}
 var alliedBattlers:Array[genericBattler] = []
 var enemyBattlers:Array[genericBattler] = []
 
@@ -29,6 +29,12 @@ const figmentPosition_ally_outer_left:Vector2 = Vector2(-75,225)
 const figmentPosition_ally_inner_right:Vector2 = Vector2(75,125)
 const figmentPosition_ally_outer_right:Vector2 = Vector2(75,225)
 
+#what each tile has in it. Starts out as empty as no battlers are placed
+var tileInhabitant:Array[genericBattler] = [
+	null,null,null,null,
+	null,null,null,null]
+
+#contains all screen positions for each tile 
 var figmentPositions:Array[Vector2] = [
 	figmentPosition_enemy_inner_left,
 	figmentPosition_enemy_outer_left,
@@ -38,6 +44,7 @@ var figmentPositions:Array[Vector2] = [
 	figmentPosition_ally_outer_left,
 	figmentPosition_ally_inner_right,
 	figmentPosition_ally_outer_right] 
+	
 	
 func _ready():
 
@@ -65,8 +72,10 @@ func _ready():
 		elif child is genericBattler:
 			if "Allied" in child.name:
 				alliedBattlers.append(child)
+				child.isAlly = true
 			elif "Enemy" in child.name:
 				enemyBattlers.append(child)
+				child.isAlly = false #shouldnt ever do anything, but just in case
 			
 			child.readyBattler()
 				
@@ -106,3 +115,14 @@ func _placeAlliedFigments(selctedTile:battlePositions) -> void:
 				childForegroundUI.selectTile()
 				return
 			return
+			
+func _battlerMoved(movingBattler:genericBattler,positionMovedTo:battlePositions):
+	for placedBattler in tileInhabitant:
+		if movingBattler == placedBattler:
+			placedBattler = null
+	
+	if positionMovedTo == battlePositions.NONE:
+		return
+
+	tileInhabitant[positionMovedTo] = movingBattler	
+			

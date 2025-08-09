@@ -11,7 +11,7 @@ var sceneTransitionTimer:Timer #TODO: make this a global timer that tracks trans
 var selectorMovementlocked:bool = true
 var select
 var selectorPosition:battleScene.battlePositions = 0 #starts innerLeft
-var parentBattleSystem
+var parentBattleSystem:battleScene
 
 signal tileSelected_placeFigment
 
@@ -37,7 +37,7 @@ func loadBattleUI():
 			
 func selectTile(displayText:String = "Please Select Tile"):
 	dialogueLabel.text = displayText
-	dialogueLabel.visible = true
+	dialougeGui.visible = true
 	tileSelector.visible = true
 	selectorMovementlocked = false
 	#unlock selector
@@ -49,9 +49,13 @@ func _process(delta: float) -> void:
 		return
 	if Input.is_action_pressed("keyboard_interact") && globalSceneTransitionTimer.is_stopped():
 		inputCooldownTimer.start()
+		if parentBattleSystem.tileInhabitant[selectorPosition + 4] != null:
+			
+			return
+			#shake indicator, give red ui stuff
 		selectorMovementlocked = true
 		tileSelector.visible = false
-		dialogueLabel.visible = false
+		dialougeGui.visible = false
 		tileSelected_placeFigment.emit(selectorPosition + 4)
 		return
 	if Input.is_action_pressed("keyboard_up") || Input.is_action_pressed("keyboard_down"):

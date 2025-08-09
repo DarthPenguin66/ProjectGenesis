@@ -40,3 +40,7 @@ script = ExtResource("4_4hpti")
 z_index = 1
 
 [connection signal="tileSelected_placeFigment" from="battle_foregroundUI" to="." method="_placeAlliedFigments"]
+[connection signal="battlerMoved" from="AlliedBattler_1" to="." method="_battlerMoved"]
+[connection signal="battlerMoved" from="AlliedBattler_2" to="." method="_battlerMoved"]
+[connection signal="battlerMoved" from="EnemyBattler_1" to="." method="_battlerMoved"]
+[connection signal="battlerMoved" from="EnemyBattler_2" to="." method="_battlerMoved"]

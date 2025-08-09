@@ -10,6 +10,9 @@ var figmentInBattle:figment = null
 var battlePosition:battleScene.battlePositions = ActiveBattleScene.battlePositions.NONE
 var battleSprite:Sprite2D 
 var isPlaced:bool = false
+var isAlly:bool = false
+
+signal battlerMoved(battler:genericBattler,newLocation:battleScene.battlePositions)
 
 func readyBattler():
 	ActiveBattleScene = self.get_parent()
@@ -22,11 +25,15 @@ func loadFigmentBattler(inputFigment:figment):
 	battleSprite.set_texture(figmentInBattle.figmentSpecies.battleSprite)
 	
 func moveBattler(positionToMoveTo:battleScene.battlePositions):
-	battlePosition = positionToMoveTo
-	if battlePosition == ActiveBattleScene.battlePositions.NONE:
+	
+	#8 is the size of the battle positions array. If we are bigger than it, or smaller than 0, we have a NONE position
+	if positionToMoveTo > 8 || positionToMoveTo < 0:
 		battleSprite.visible = false
+		battlePosition = ActiveBattleScene.battlePositions.NONE
 	else:
 		battleSprite.visible = true
+		battlePosition = positionToMoveTo
+	battlerMoved.emit(self,battlePosition)
 	battleSprite.position = ActiveBattleScene.figmentPositions[battlePosition]
 	print("stop")
 		
