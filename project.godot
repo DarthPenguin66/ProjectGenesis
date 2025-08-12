@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 PlayerData="*res://Scenes/globalScenes/player_data.tscn"
 GlobalSceneTransitionTimer="*res://Scenes/globalScenes/globalSceneTransitionTimer.tscn"
+audio_manager="*res://Scenes/globalScenes/audio_manager.tscn"
 
 [dotnet]
 

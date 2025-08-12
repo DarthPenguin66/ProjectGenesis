@@ -1,12 +1,10 @@
 class_name battle_foregroundUI
-extends Node
+extends topSceneNodeType
 
 var tileSelector:AnimatedSprite2D
 var dialougeGui:CanvasGroup
 var dialogueLabel:Label
 var inputCooldownTimer:Timer
-var sceneTransitionTimer:Timer #TODO: make this a global timer that tracks transitions
-
 
 var selectorMovementlocked:bool = true
 var select
@@ -15,10 +13,6 @@ var parentBattleSystem:battleScene
 
 signal tileSelected_placeFigment
 
-var globalSceneTransitionTimer:Node
-
-func _ready():
-	globalSceneTransitionTimer = get_node("/root/GlobalSceneTransitionTimer")
 
 func loadBattleUI():
 	parentBattleSystem = get_parent()
@@ -47,10 +41,12 @@ func _process(delta: float) -> void:
 	#print("is stopped: " + str(inputCooldownTimer.is_stopped()))
 	if selectorMovementlocked || not inputCooldownTimer.is_stopped() :
 		return
-	if Input.is_action_pressed("keyboard_interact") && globalSceneTransitionTimer.is_stopped():
+		
+	#TODO: check if calling scene transition timer is bad, since we are (to an extent) going up the node tree without a signal
+	if Input.is_action_pressed("keyboard_interact") && sceneTransitionTimer.is_stopped():
 		inputCooldownTimer.start()
 		if parentBattleSystem.tileInhabitant[selectorPosition + 4] != null:
-			
+			audio_manager.playErrorSound.emit()
 			return
 			#shake indicator, give red ui stuff
 		selectorMovementlocked = true

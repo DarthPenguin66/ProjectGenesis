@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwyhhc0jqjyrd"]
+
+[ext_resource type="Script" path="res://scripts/globalScripts/audioManager.gd" id="1_kanua"]
+[ext_resource type="AudioStream" uid="uid://bewou50gv163m" path="res://audio/soundEffects/errorSound.mp3" id="2_xgj35"]
+
+[node name="audio_Manager" type="Node"]
+script = ExtResource("1_kanua")
+errorSound = ExtResource("2_xgj35")
+
+[node name="musicAudio" type="AudioStreamPlayer" parent="."]
+
+[node name="soundEffectAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_xgj35")
+volume_db = -10.0
+
+[connection signal="playErrorSound" from="." to="." method="_playingErrorSound"]

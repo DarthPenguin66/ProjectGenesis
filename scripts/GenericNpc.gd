@@ -1,4 +1,4 @@
-extends Area2D
+extends topSceneNodeType
 
 var dialogueMode
 var eventMode
@@ -24,6 +24,6 @@ func interactCall():
 	
 	#after finishing the dialouge, we should move to a new scene, if required
 	if transitionSceneAfterDialogue:
-		globalSceneTransitionTimer.start()
-		get_tree().change_scene_to_file(sceneToTransitionTo)
+		sceneTransitionTimer.start_sceneTransitionTimer.emit()
+		get_tree().change_scene_to_file(sceneToTransitionTo) #TOCO: we should have a manager handle this
 	

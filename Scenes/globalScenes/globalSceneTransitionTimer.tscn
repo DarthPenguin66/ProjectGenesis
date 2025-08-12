@@ -1,5 +1,10 @@
-[gd_scene format=3 uid="uid://cg3gsrwnleu05"]
+[gd_scene load_steps=2 format=3 uid="uid://cg3gsrwnleu05"]
+
+[ext_resource type="Script" path="res://scripts/globalScripts/GlobalSceneTransitionTimer.gd" id="1_1w65b"]
 
 [node name="globalSceneTransitionTimer" type="Timer"]
 wait_time = 0.25
 one_shot = true
+script = ExtResource("1_1w65b")
+
+[connection signal="start_sceneTransitionTimer" from="." to="." method="_starting_sceneTransitionTimer"]

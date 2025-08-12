@@ -1,12 +1,11 @@
 class_name battleScene
-extends Node
+extends topSceneNodeType
 
 
 #@export var previousSceneInformation
 #TODO: need to figure out how to store data from previous scene and how to best transition back after a battle
 
 #other nodes
-var playerData:Node
 var childBackgroundUI:Node
 var childForegroundUI:Node
 
@@ -47,9 +46,6 @@ var figmentPositions:Array[Vector2] = [
 	
 	
 func _ready():
-
-	#get player data
-	playerData = get_node("/root/PlayerData")
 
 	#setup UI nodes
 	print("battleScene readied")
