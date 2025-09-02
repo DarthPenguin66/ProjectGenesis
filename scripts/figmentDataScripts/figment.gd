@@ -18,13 +18,15 @@ extends Node
 @export var currentStatus:Array #TODO: need to find out if statuses are exclusive from each other
 @export var currentAbility:FigmentAbility
 
-func _init(species:FigmentData, level:int, figmentAbility:FigmentAbility = null, moves:Array[figmentMoves]=[], nickName:String=""):
+func _init(species:FigmentData, level:int, figmentAbility:FigmentAbility = null, moves:Array[figmentMoves]=[], nickName_in:String=""):
 	figmentSpecies = species
 	currentLevel = level
 	currentMoves = moves
 	currentAbility = figmentAbility
-	if nickName.is_empty():
+	if nickName_in.is_empty():
 		nickName = figmentSpecies.species_name
+	else:
+		nickName = nickName_in
 		
 	maxHealth = floor(figmentSpecies.health_percent * 0.01 * (50 + 19 * currentLevel))
 	currentPower = floor(figmentSpecies.power_percent * 0.01 * (50 + 19 * currentLevel))

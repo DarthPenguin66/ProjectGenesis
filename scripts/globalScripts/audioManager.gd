@@ -14,6 +14,7 @@ func _ready():
 			soundEffectAudioplayer.stream.loop = false #if we dont set this, our sound effect will loop if it was imported with loop being set. kinda dumb
 
 
+
 signal playErrorSound
 
 func _playingErrorSound():
