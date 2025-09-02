@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cnk5yamopsfq1"]
 
-[ext_resource type="Script" path="res://scripts/BattleScene/battleScene.gd" id="1_22qod"]
+[ext_resource type="Script" uid="uid://bqnb30b71jwvk" path="res://scripts/BattleScene/battleScene.gd" id="1_22qod"]
 [ext_resource type="PackedScene" uid="uid://duqaqx5c18ddh" path="res://Scenes/BattleScenes/UI/BattleScene_BackgroundUI.tscn" id="2_56x8s"]
 [ext_resource type="PackedScene" uid="uid://ds52wbfyhuwqe" path="res://Scenes/BattleScenes/UI/BattleSceneForegroundUI.tscn" id="3_mgii1"]
-[ext_resource type="Script" path="res://scripts/BattleScene/genericBattler.gd" id="4_4hpti"]
+[ext_resource type="Script" uid="uid://c5lpd7od1ruwd" path="res://scripts/BattleScene/genericBattler.gd" id="4_4hpti"]
 
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cejajtv2fv0js"]
 
-[ext_resource type="Script" path="res://scripts/GenericNpc.gd" id="1_0ixim"]
+[ext_resource type="Script" uid="uid://bevhk8gqt6ilt" path="res://scripts/GenericNpc.gd" id="1_0ixim"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_us5lt"]
 

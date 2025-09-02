@@ -2,6 +2,7 @@
 
 [sub_resource type="CSharpScript" id="CSharpScript_ta404"]
 resource_local_to_scene = true
+resource_name = ""
 script/source = "using Godot;
 using System;
 

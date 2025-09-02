@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="FigmentData" load_steps=8 format=3 uid="uid://hgfodicjbu8"]
 
-[ext_resource type="Script" path="res://scripts/figmentDataScripts/figmentMoves.gd" id="1_dtj8a"]
-[ext_resource type="Script" path="res://scripts/figmentDataScripts/figmentAbilities.gd" id="1_nn5bo"]
+[ext_resource type="Script" uid="uid://dl0s1sbkfrxo3" path="res://scripts/figmentDataScripts/figmentMoves.gd" id="1_dtj8a"]
+[ext_resource type="Script" uid="uid://d3lhbpbgdxqnt" path="res://scripts/figmentDataScripts/figmentAbilities.gd" id="1_nn5bo"]
 [ext_resource type="Resource" uid="uid://cnpbq0kh7xwc6" path="res://resources/moves/guard.tres" id="2_f6sgg"]
 [ext_resource type="Resource" uid="uid://db0lmmv002yh8" path="res://resources/abilities/subZero.tres" id="2_yvila"]
 [ext_resource type="Resource" uid="uid://cuinl1wugbyhq" path="res://resources/moves/iceBlast.tres" id="3_2sieu"]
-[ext_resource type="Texture2D" uid="uid://bsefvvi6jc03x" path="res://artDump/IceBird.png" id="3_gds66"]
-[ext_resource type="Script" path="res://scripts/figmentDataScripts/FigmentSpeciesData.gd" id="4_krajv"]
+[ext_resource type="Texture2D" uid="uid://bsefvvi6jc03x" path="res://artDump/iceBird.png" id="3_gds66"]
+[ext_resource type="Script" uid="uid://2nwod1257cbp" path="res://scripts/figmentDataScripts/FigmentSpeciesData.gd" id="4_krajv"]
 
 [resource]
 script = ExtResource("4_krajv")

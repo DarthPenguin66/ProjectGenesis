@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="FigmentData" load_steps=4 format=3 uid="uid://q7u7rnqgc8u8"]
 
-[ext_resource type="Script" path="res://scripts/figmentDataScripts/figmentAbilities.gd" id="1_3mytc"]
-[ext_resource type="Script" path="res://scripts/figmentDataScripts/figmentMoves.gd" id="2_e31jr"]
-[ext_resource type="Script" path="res://scripts/figmentDataScripts/FigmentSpeciesData.gd" id="3_tm8ki"]
+[ext_resource type="Script" uid="uid://d3lhbpbgdxqnt" path="res://scripts/figmentDataScripts/figmentAbilities.gd" id="1_3mytc"]
+[ext_resource type="Script" uid="uid://dl0s1sbkfrxo3" path="res://scripts/figmentDataScripts/figmentMoves.gd" id="2_e31jr"]
+[ext_resource type="Script" uid="uid://2nwod1257cbp" path="res://scripts/figmentDataScripts/FigmentSpeciesData.gd" id="3_tm8ki"]
 
 [resource]
 script = ExtResource("3_tm8ki")

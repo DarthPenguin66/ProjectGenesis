@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cwyhhc0jqjyrd"]
 
-[ext_resource type="Script" path="res://scripts/globalScripts/audioManager.gd" id="1_kanua"]
+[ext_resource type="Script" uid="uid://k6lradklrc4s" path="res://scripts/globalScripts/audioManager.gd" id="1_kanua"]
 [ext_resource type="AudioStream" uid="uid://bewou50gv163m" path="res://audio/soundEffects/errorSound.mp3" id="2_xgj35"]
 
 [node name="audio_Manager" type="Node"]

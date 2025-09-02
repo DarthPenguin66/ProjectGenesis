@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="FigmentAbility" load_steps=2 format=3 uid="uid://db0lmmv002yh8"]
 
-[ext_resource type="Script" path="res://scripts/figmentDataScripts/figmentAbilities.gd" id="1_8vq6v"]
+[ext_resource type="Script" uid="uid://d3lhbpbgdxqnt" path="res://scripts/figmentDataScripts/figmentAbilities.gd" id="1_8vq6v"]
 
 [resource]
 script = ExtResource("1_8vq6v")
